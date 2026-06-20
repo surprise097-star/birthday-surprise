@@ -1,0 +1,57 @@
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#ff5c8d,#ff9db5);
+overflow:hidden;
+text-align:center;
+color:white;
+}
+
+.container{
+padding:20px;
+}
+
+.slider img{
+width:90%;
+max-width:350px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(0,0,0,.3);
+}
+
+button{
+padding:12px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+margin-top:20px;
+cursor:pointer;
+}
+
+#surprise{
+display:none;
+margin-top:20px;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0}
+to{opacity:1}
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:24px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+}
