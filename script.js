@@ -32,5 +32,9 @@ document.body.appendChild(heart);
 setTimeout(()=>{
 heart.remove();
 },5000);
+window.onload = function () {
+  alert("🎉 Happy Birthday! 🎂 Wishing you all the happiness! 💖");
+};
+},40
 
-},400);
+
