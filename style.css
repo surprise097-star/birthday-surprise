@@ -1,115 +1,197 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
 body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#ff5c8d,#ff9db5);
-overflow:hidden;
-text-align:center;
-color:white;
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
 }
 
-.container{
-padding:20px;
+/* Sections */
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
 }
 
-.slider img{
-width:90%;
-max-width:350px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(0,0,0,.3);
+/* Heading */
+
+h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+h2{
+    margin-bottom:20px;
+    font-size:1.5rem;
+}
+
+/* Paragraph */
+
+p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+/* Buttons */
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    margin:10px;
+    font-size:1rem;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.open-btn{
+    background:white;
+    color:black;
+}
+
+.yes-btn{
+    background:white;
+    color:black;
+}
+
+.no-btn{
+    background:#222;
+    color:white;
+    position:relative;
+}
+
+/* Gallery */
+
+.gallery{
+    margin-top:30px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.gallery img{
+    width:230px;
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid white;
+    box-shadow:0 0 20px rgba(255,255,255,0.15);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.caption{
+    margin-top:8px;
+    font-size:0.95rem;
+}
+
+/* Question Section */
+
+.question-box{
+    margin-top:40px;
+}
+
+.final-text{
+    margin-top:30px;
+    font-size:1.3rem;
+}
+
+/* Hidden */
+
+.hidden{
+    display:none;
+}
+
+/* Confetti */
+
+.confetti{
+    position:fixed;
+    width:10px;
+    height:10px;
+    background:white;
+    top:-10px;
+    animation:fall linear infinite;
+    opacity:0.7;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+/* Fade Animation */
+
+.fade{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Music Button */
+
+.music-btn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    background:white;
+    color:black;
+    z-index:1000;
+}
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+h1{
+    font-size:2.2rem;
+}
+
+h2{
+    font-size:1.2rem;
+}
+
+p{
+    font-size:1rem;
+}
+
+.gallery img{
+    width:180px;
+    height:230px;
 }
 
 button{
-padding:12px 25px;
-border:none;
-border-radius:30px;
-font-size:18px;
-margin-top:20px;
-cursor:pointer;
+    padding:10px 20px;
+    font-size:0.95rem;
 }
 
-#surprise{
-display:none;
-margin-top:20px;
-animation:fade 1s;
-}
-
-@keyframes fade{
-from{opacity:0}
-to{opacity:1}
-}
-
-.heart{
-position:fixed;
-bottom:-20px;
-font-size:24px;
-animation:float 5s linear infinite;
-}
-
-@keyframes float{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-100vh);
-opacity:0;
-}
-}
-.cake {
-  position: relative;
-  margin: 100px auto;
-  width: 200px;
-  animation: bounce 2s infinite;
-}
-
-.plate {
-  width: 220px;
-  height: 20px;
-  background: #ccc;
-  border-radius: 50%;
-  margin: auto;
-}
-
-.layer {
-  width: 180px;
-  height: 40px;
-  margin: auto;
-  border-radius: 10px;
-}
-
-.layer-bottom {
-  background: #ff6b6b;
-}
-
-.layer-middle {
-  background: #ffa502;
-}
-
-.layer-top {
-  background: #ff9ff3;
-}
-
-.icing {
-  width: 180px;
-  height: 20px;
-  background: white;
-  margin: auto;
-  border-radius: 10px;
-}
-
-.candles {
-  text-align: center;
-  font-size: 30px;
-  margin-top: -10px;
-  animation: glow 1s infinite alternate;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes glow {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
 }
