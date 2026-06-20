@@ -1,40 +1,78 @@
-const photos = [
-"images/photo1.jpg",
-"images/photo2.jpg",
-"images/photo3.jpg",
-"images/photo4.jpg"
-];
+ function openSite(){
 
-let i = 0;
+document.getElementById("opening").style.display = "none";
 
-setInterval(() => {
-i++;
-if(i >= photos.length){
-i = 0;
-}
-document.getElementById("slide").src = photos[i];
-},3000);
+document.getElementById("mainSection")
+.classList.remove("hidden");
 
-function showSurprise(){
-document.getElementById("surprise").style.display="block";
 }
 
-setInterval(()=>{
-const heart=document.createElement("div");
+function showMessage1(){
 
-heart.className="heart";
-heart.innerHTML="❤️";
+document.getElementById("msg1").innerHTML =
+"Good 😌✨";
 
-heart.style.left=Math.random()*100+"vw";
+}
 
-document.body.appendChild(heart);
+function showMessage2(){
 
-setTimeout(()=>{
-heart.remove();
-},5000);
-window.onload = function () {
-  alert("🎉 Happy Birthday! 🎂 Wishing you all the happiness! 💖");
-};
-},40
+document.getElementById("msg2").innerHTML =
+"Expected answer 😭🎂";
 
+}
 
+function showFinal(){
+
+document.getElementById("finalMessage").innerHTML =
+"Have a really nice birthday and enjoy your day 🎉✨";
+
+}
+
+/* Moving Button */
+
+const moveBtn = document.getElementById("moveBtn");
+
+moveBtn.addEventListener("mouseover", () => {
+
+const x = Math.floor(Math.random() * 300) - 150;
+const y = Math.floor(Math.random() * 300) - 150;
+
+moveBtn.style.transform =
+`translate(${x}px, ${y}px)`;
+
+});
+
+/* Confetti */
+
+for(let i=0; i<50; i++){
+
+const confetti = document.createElement("div");
+
+confetti.classList.add("confetti");
+
+confetti.style.left = Math.random()*100 + "vw";
+
+confetti.style.animationDuration =
+(Math.random()*3 + 2) + "s";
+
+document.body.appendChild(confetti);
+
+}
+
+/* Music */
+
+const music = document.getElementById("bgMusic");
+
+function toggleMusic(){
+
+if(music.paused){
+
+music.play();
+
+}else{
+
+music.pause();
+
+}
+
+}
