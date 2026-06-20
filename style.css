@@ -55,3 +55,61 @@ transform:translateY(-100vh);
 opacity:0;
 }
 }
+.cake {
+  position: relative;
+  margin: 100px auto;
+  width: 200px;
+  animation: bounce 2s infinite;
+}
+
+.plate {
+  width: 220px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.layer {
+  width: 180px;
+  height: 40px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.layer-bottom {
+  background: #ff6b6b;
+}
+
+.layer-middle {
+  background: #ffa502;
+}
+
+.layer-top {
+  background: #ff9ff3;
+}
+
+.icing {
+  width: 180px;
+  height: 20px;
+  background: white;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.candles {
+  text-align: center;
+  font-size: 30px;
+  margin-top: -10px;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
